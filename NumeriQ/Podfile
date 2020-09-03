@@ -8,4 +8,5 @@ target 'NumeriQ' do
   pod 'Swinject'
   pod 'RxAlamofire'
   pod 'ReachabilitySwift'
+  pod 'RxDataSources'
 end

@@ -92,10 +92,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9o4-ck-TAg"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="S8n-ja-Ocw"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
