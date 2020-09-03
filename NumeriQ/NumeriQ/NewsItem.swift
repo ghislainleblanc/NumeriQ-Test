@@ -12,10 +12,20 @@ struct NewsItem: Decodable {
     var title: String?
     var description: String?
     var urlToImage: String?
+    var source: Source?
 
     enum CodingKeys: String, CodingKey {
         case title
         case description
         case urlToImage
+        case source
+    }
+}
+
+struct Source: Decodable {
+    var name: String?
+
+    enum CodingKeys: String, CodingKey {
+        case name
     }
 }
