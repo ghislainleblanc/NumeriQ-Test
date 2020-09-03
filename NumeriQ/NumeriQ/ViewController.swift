@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         NetworkManager.shared.getNewsFeed { (newsFeed) in
-            print(newsFeed)
+            print(newsFeed?.articles.count)
         }
     }
 }

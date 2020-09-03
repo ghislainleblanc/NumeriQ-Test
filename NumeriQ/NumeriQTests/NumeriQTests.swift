@@ -19,16 +19,13 @@ class NumeriQTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAPI() throws {
+        let expectation = XCTestExpectation(description: "Download news feed home page")
+        NetworkManager.shared.getNewsFeed { (feed) in
+            XCTAssertTrue(feed?.articles.count == 20)
+            expectation.fulfill()
         }
-    }
 
+        wait(for: [expectation], timeout: 10.0)
+    }
 }
