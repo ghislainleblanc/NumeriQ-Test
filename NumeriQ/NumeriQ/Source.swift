@@ -1,5 +1,5 @@
 //
-//  NewsItem.swift
+//  Source.swift
 //  NumeriQ
 //
 //  Created by Ghislain Leblanc on 2020-09-03.
@@ -8,9 +8,6 @@
 
 import Foundation
 
-struct NewsItem: Decodable {
-    var title: String?
-    var description: String?
-    var urlToImage: String?
-    var source: Source?
+struct Source: Decodable {
+    var name: String?
 }

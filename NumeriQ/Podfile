@@ -6,7 +6,4 @@ target 'NumeriQ' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Swinject'
-  pod 'RxAlamofire'
-  pod 'ReachabilitySwift'
-  pod 'RxDataSources'
 end

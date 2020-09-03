@@ -10,8 +10,4 @@ import Foundation
 
 struct NewsFeed: Decodable {
     var articles: [NewsItem]
-
-    enum CodingKeys: String, CodingKey {
-        case articles
-    }
 }
