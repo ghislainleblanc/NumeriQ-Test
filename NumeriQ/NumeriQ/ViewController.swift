@@ -9,18 +9,17 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import RxDataSources
 
 class ViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
-    var newsFeedItems: BehaviorRelay<[NewsItem]> = BehaviorRelay(value: [])
+    private var newsFeedItems: BehaviorRelay<[NewsItem]> = BehaviorRelay(value: [])
 
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         NetworkManager.shared.getNewsFeed { [weak self] (newsFeed) in
             self?.newsFeedItems.accept(newsFeed.articles)
