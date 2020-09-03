@@ -5,4 +5,5 @@ target 'NumeriQ' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Swinject'
 end
