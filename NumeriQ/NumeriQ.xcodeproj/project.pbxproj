@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		853B8ACD2501518000EE3FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853B8ACC2501518000EE3FAA /* Assets.xcassets */; };
 		853B8AD02501518000EE3FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853B8ACE2501518000EE3FAA /* LaunchScreen.storyboard */; };
 		853B8ADB2501518000EE3FAA /* NumeriQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B8ADA2501518000EE3FAA /* NumeriQTests.swift */; };
+		85E5D77D250155E700F152CD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5D77C250155E700F152CD /* NetworkManager.swift */; };
+		85E5D77F250159FD00F152CD /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5D77E250159FD00F152CD /* NewsItem.swift */; };
+		85E5D78125015A9400F152CD /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5D78025015A9400F152CD /* NewsFeed.swift */; };
 		D7CE64D7A96395830C1724D5 /* Pods_NumeriQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E90FDA78FDDBA7B6EBDCA6B /* Pods_NumeriQ.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		853B8AD62501518000EE3FAA /* NumeriQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeriQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B8ADA2501518000EE3FAA /* NumeriQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeriQTests.swift; sourceTree = "<group>"; };
 		853B8ADC2501518000EE3FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E5D77C250155E700F152CD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		85E5D77E250159FD00F152CD /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		85E5D78025015A9400F152CD /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
 		BC74794347AB4D7374E28DC9 /* Pods-NumeriQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumeriQ.debug.xcconfig"; path = "Target Support Files/Pods-NumeriQ/Pods-NumeriQ.debug.xcconfig"; sourceTree = "<group>"; };
 		E8A0ACF156ECFAE841348079 /* Pods-NumeriQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumeriQ.release.xcconfig"; path = "Target Support Files/Pods-NumeriQ/Pods-NumeriQ.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +107,9 @@
 				853B8ACC2501518000EE3FAA /* Assets.xcassets */,
 				853B8ACE2501518000EE3FAA /* LaunchScreen.storyboard */,
 				853B8AD12501518000EE3FAA /* Info.plist */,
+				85E5D77C250155E700F152CD /* NetworkManager.swift */,
+				85E5D77E250159FD00F152CD /* NewsItem.swift */,
+				85E5D78025015A9400F152CD /* NewsFeed.swift */,
 			);
 			path = NumeriQ;
 			sourceTree = "<group>";
@@ -120,7 +129,6 @@
 				BC74794347AB4D7374E28DC9 /* Pods-NumeriQ.debug.xcconfig */,
 				E8A0ACF156ECFAE841348079 /* Pods-NumeriQ.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -269,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E5D78125015A9400F152CD /* NewsFeed.swift in Sources */,
+				85E5D77D250155E700F152CD /* NetworkManager.swift in Sources */,
+				85E5D77F250159FD00F152CD /* NewsItem.swift in Sources */,
 				853B8AC82501517E00EE3FAA /* ViewController.swift in Sources */,
 				853B8AC42501517E00EE3FAA /* AppDelegate.swift in Sources */,
 				853B8AC62501517E00EE3FAA /* SceneDelegate.swift in Sources */,
