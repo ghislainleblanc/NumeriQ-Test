@@ -16,7 +16,9 @@ class NetworkManager {
     private let apiKey = "5b025c1696634ffeb4e1704dfc68f551"
 
     func getNewsFeed(completion: @escaping (NewsFeed) -> Void) {
-        let URL = "\(apiEndPoint)?q=bitcoin&from=2020-08-03&sortBy=publishedAt&apiKey=\(apiKey)"
+        let date = Date()
+        let formatedDate = date.getFormattedDate(format: "yyyy-MM-dd")
+        let URL = "\(apiEndPoint)?q=bitcoin&from=\(formatedDate)&sortBy=publishedAt&apiKey=\(apiKey)"
 
         AF.request(URL)
             .validate()
@@ -24,5 +26,13 @@ class NetworkManager {
                 guard let feed = response.value else { return }
                 completion(feed)
         }
+    }
+}
+
+extension Date {
+    func getFormattedDate(format: String) -> String {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = format
+        return dateformat.string(from: self)
     }
 }
