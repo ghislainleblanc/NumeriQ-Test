@@ -30,8 +30,8 @@ class NewsItemCollectionViewCellViewModel: NewsItemCollectionViewCellViewModelPr
 }
 
 protocol NewsItemCollectionViewCellProtocol {
-    func setup()
     var viewModel: NewsItemCollectionViewCellViewModelProtocol? { get set }
+    func setup()
 }
 
 class NewsItemCollectionViewCell: UICollectionViewCell, NewsItemCollectionViewCellProtocol {
