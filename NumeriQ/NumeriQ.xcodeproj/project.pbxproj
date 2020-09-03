@@ -14,6 +14,7 @@
 		853B8ACD2501518000EE3FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853B8ACC2501518000EE3FAA /* Assets.xcassets */; };
 		853B8AD02501518000EE3FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853B8ACE2501518000EE3FAA /* LaunchScreen.storyboard */; };
 		853B8ADB2501518000EE3FAA /* NumeriQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B8ADA2501518000EE3FAA /* NumeriQTests.swift */; };
+		D7CE64D7A96395830C1724D5 /* Pods_NumeriQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E90FDA78FDDBA7B6EBDCA6B /* Pods_NumeriQ.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E90FDA78FDDBA7B6EBDCA6B /* Pods_NumeriQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumeriQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B8AC02501517E00EE3FAA /* NumeriQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumeriQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B8AC32501517E00EE3FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		853B8AC52501517E00EE3FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		853B8AD62501518000EE3FAA /* NumeriQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeriQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B8ADA2501518000EE3FAA /* NumeriQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeriQTests.swift; sourceTree = "<group>"; };
 		853B8ADC2501518000EE3FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC74794347AB4D7374E28DC9 /* Pods-NumeriQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumeriQ.debug.xcconfig"; path = "Target Support Files/Pods-NumeriQ/Pods-NumeriQ.debug.xcconfig"; sourceTree = "<group>"; };
+		E8A0ACF156ECFAE841348079 /* Pods-NumeriQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumeriQ.release.xcconfig"; path = "Target Support Files/Pods-NumeriQ/Pods-NumeriQ.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CE64D7A96395830C1724D5 /* Pods_NumeriQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3096CF6B1AC673289D1491BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E90FDA78FDDBA7B6EBDCA6B /* Pods_NumeriQ.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		853B8AB72501517E00EE3FAA = {
 			isa = PBXGroup;
 			children = (
 				853B8AC22501517E00EE3FAA /* NumeriQ */,
 				853B8AD92501518000EE3FAA /* NumeriQTests */,
 				853B8AC12501517E00EE3FAA /* Products */,
+				F14D945513AC4F0E770A0A87 /* Pods */,
+				3096CF6B1AC673289D1491BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +114,16 @@
 			path = NumeriQTests;
 			sourceTree = "<group>";
 		};
+		F14D945513AC4F0E770A0A87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC74794347AB4D7374E28DC9 /* Pods-NumeriQ.debug.xcconfig */,
+				E8A0ACF156ECFAE841348079 /* Pods-NumeriQ.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 853B8ADF2501518000EE3FAA /* Build configuration list for PBXNativeTarget "NumeriQ" */;
 			buildPhases = (
+				0FD14342382C04D0E3209755 /* [CP] Check Pods Manifest.lock */,
 				853B8ABC2501517E00EE3FAA /* Sources */,
 				853B8ABD2501517E00EE3FAA /* Frameworks */,
 				853B8ABE2501517E00EE3FAA /* Resources */,
+				F6B85DB2ED0F5FFF3DEEC21A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +221,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FD14342382C04D0E3209755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NumeriQ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B85DB2ED0F5FFF3DEEC21A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NumeriQ/Pods-NumeriQ-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NumeriQ/Pods-NumeriQ-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NumeriQ/Pods-NumeriQ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		853B8ABC2501517E00EE3FAA /* Sources */ = {
@@ -360,6 +429,7 @@
 		};
 		853B8AE02501518000EE3FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC74794347AB4D7374E28DC9 /* Pods-NumeriQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +448,7 @@
 		};
 		853B8AE12501518000EE3FAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A0ACF156ECFAE841348079 /* Pods-NumeriQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
