@@ -22,7 +22,7 @@ class NumeriQTests: XCTestCase {
     func testAPI() throws {
         let expectation = XCTestExpectation(description: "Download news feed home page")
         NetworkManager.shared.getNewsFeed { (feed) in
-            XCTAssertTrue(feed?.articles.count == 20)
+            XCTAssertTrue(feed.articles.count == 20)
             expectation.fulfill()
         }
 
