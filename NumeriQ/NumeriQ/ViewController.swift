@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Swinject
 
 class ViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -26,21 +27,12 @@ class ViewController: UIViewController {
         }
 
         newsFeedItems.asObservable().bind(to: collectionView.rx.items(cellIdentifier: NewsItemCollectionViewCell.reuseIdentifier, cellType: NewsItemCollectionViewCell.self)) { indexPath, item, cell in
-            cell.titleLabel.text = item.title
-            cell.desciptionLabel.text = item.description
-            cell.sourceLabel.text = item.source?.name
-
-            if let url = URL(string: item.urlToImage ?? "") {
-                DispatchQueue.global().async {
-                    if let data = try? Data(contentsOf: url) {
-                        if let image = UIImage(data: data) {
-                            DispatchQueue.main.async {
-                                cell.imageView.image = image
-                            }
-                        }
-                    }
-                }
+            let container = Container()
+            container.register(NewsItemCollectionViewCellViewModel.self) { _ in
+                NewsItemCollectionViewCellViewModel(title: item.title, source: item.source?.name, description: item.description, imageUrl: item.urlToImage)
             }
+            cell.viewModel = container.resolve(NewsItemCollectionViewCellViewModel.self)!
+            cell.setup()
         }.disposed(by: disposeBag)
     }
 }
